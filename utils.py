@@ -25,7 +25,7 @@ logger.addHandler(ch)
 
 
 # app secret
-SECRET = "['S3G695jNO1823m9d0XyX~WRTc/_l"
+SECRET = "[your-secret]"
 
 
 # The following functions and regexes have been mostly taken off the course material
