@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Edit comment{% endblock %}
+
+{% block headline %}Edit comment{% endblock %}
+
+{% block main %}
+<form id="create-comment-form" method="POST">
+    <label for="comment">Comment</label>
+    <div class="form-field">
+    	<textarea type="textarea" name="comment" placeholder="Comment" required>{{ comment.comment }}</textarea>
+    </div>
+
+    <div class="form-submit">
+    	<button type="submit">Update comment</button>
+    </div>
+</form>
+{% include "cancel.html" %}
+{% endblock %}

@@ -1,0 +1,13 @@
+<div class="title">
+    <h1>Multi-user-blog</h1>
+</div>
+<div class="menu">
+    <a href="{{ url_for('index') }}">Home</a> |
+    {% if g.logged_in %}
+    <a href="{{ url_for('logout') }}">Log out</a> |
+    <a href="{{ url_for('create_entry') }}">New blog post</a>
+    {% else %}
+    <a href="{{ url_for('login') }}">Log in</a> |
+    <a href="{{ url_for('signup') }}">Sign up</a>
+    {% endif %}
+</div>

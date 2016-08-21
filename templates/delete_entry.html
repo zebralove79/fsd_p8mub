@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Delete - {{ entry.title }}{% endblock %}
+
+{% block headline %}Delete blog post - {{ entry.title }}{% endblock %}
+
+{% block main %}
+<form id="create-entry-form" method="POST">
+	<p>This action cannot be undone. Are you sure, you want to delete the blog entry?</p>
+    <label><input type="checkbox" name="confirm" required>Yes, delete the blog entry.</label>
+    <button type="submit">Delete blog post</button>
+</form>
+<a href="{{ url_for('entry', entry_id=request.view_args['entry_id']) }}">Cancel</a>
+{% endblock %}

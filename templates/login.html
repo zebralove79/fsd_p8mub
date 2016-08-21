@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block headline %}Login{% endblock %}
+
+{% block main %}
+{% include "messages.html" %}
+<form id="login-form" method="post">
+    <label for="username">Username</label>
+    <div class="form-field">
+        <input type="text" name="username" placeholder="Username" required>
+    </div>
+
+    <label for="password">Password</label>
+    <div class="form-field">
+        <input type="password" name="password" placeholder="Password" required>
+    </div>
+
+    <div class="form-submit">
+        <button type="submit">Log in</button>
+    </div>
+</form>
+
+<p class="redirect">No account yet? <a href="{{ url_for('signup') }}">Sign up</a>.</p>
+{% endblock %}

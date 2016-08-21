@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Delete comment{% endblock %}
+
+{% block headline %}Delete comment{% endblock %}
+
+{% block main %}
+<form id="create-entry-form" method="POST">
+    <p>This action cannot be undone. Are you sure, you want to delete the comment?</p>
+    <label><input type="checkbox" name="confirm" required>Yes, delete the comment.</label>
+
+    <div class="form-submit">
+    	<button type="submit">Delete comment</button>
+    </div>
+</form>
+{% include "cancel.html" %}
+{% endblock %}
